@@ -1,12 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Hosting</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-</head>
-<body>
-    <h1>This is sample hosting</h1>
-</body>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img class="nav-logo" src="data:image/jpeg;base64,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"
+           alt="logo" height="40px" width="40px">
+          <a class="navbar-brand" href="#"><i><b>Sanskriti</b></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="nav-alignment collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Skills & abilities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="gif">
+        <div class="mt gif-head">
+            <div class="head">Hi there,</div>
+            <div class="head">I'm Sanskriti</div>
+            <div class="into">I Am Into <span>Web Development</span></div>
+            <div><button type="button" class="btn btn-primary">About Me <i class="fa-solid fa-arrow-right"></i></button></div>
+            <div class="socials">
+               <div class="circle"><i class="fa-brands fa-linkedin"></i></div>
+                <div class="circle"><i class="fa-brands fa-github"></i></div>
+                <div class="circle"><i class="fa-solid fa-phone"></i></div>
+                <div class="circle"><i class="fa-solid fa-envelope"></i></div>
+            </div>
+        </div>
+        <div class="mt gif-img">
+            <img src="profile-img.jpeg" alt="">
+        </div>
+      </div>
+      <div class="about">
+        <i class="fa-solid fa-user"></i>About Me
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
 </html>
