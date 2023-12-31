@@ -11,8 +11,9 @@
 }
 .gif{
     display: flex;
+    flex-wrap:wrap;
     justify-content: space-around;
-    height:600px;
+    height:40%;
     width:100%;
     background-image: url("https://i.pinimg.com/originals/88/15/63/881563d6444b370fa4ceea0c3183bb4c.gif");
 }
@@ -22,9 +23,13 @@
     text-align: center;
 }
 .gif-img img{
-    height:400px;
-    width:400px;
+    height:300px;
+    width:300px;
     border-radius: 50%;
+    margin:5rem 0 5rem 0;
+}
+.gif-img img:hover{
+  transform: scale(1.05);
 }
 .circle{
     height:3rem;
@@ -57,12 +62,11 @@
     font-size:2rem;
 }
 .about{
-    height:400px;
     width:100%;
     background-color: aliceblue;
     text-align: center;
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 600;
     padding: auto;
     display: flex;
     flex-direction: column;
@@ -104,20 +108,26 @@
   .about-desc{
     margin: auto;
     text-align: center;
-    height:400px;
-    width:500px;
-    font-size:1.2rem;
+    font-size:1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .about-desc img{
+    height:300px;
+    width: 300px;
   }
   .skills{
-    height: 100px;
+    width: 100%;
     background-color: black;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
     padding: auto;
     margin: auto;
     font-weight: 500;
+    flex-wrap:wrap;
   }
   .skills div{
     margin:auto;
@@ -125,7 +135,6 @@
 
   /* footer section starts */
 .footer {
-    height: 450px;
     width:100%;
     /* padding-top: 0; */
     background: rgb(0, 1, 43);
@@ -211,6 +220,12 @@
     font-size: 1.5rem;
     animation: pound 0.35s infinite alternate;
   }
+  .desc-card{
+    height:300px;
+    width:300px;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+  }
   @-webkit-keyframes pound {
     to {
       transform: scale(1.1);
@@ -232,7 +247,45 @@
       padding: 1.2rem;
     }
   }
+  @media(max-width:400px){
+    .gif-img img{
+      height:200px;
+      width:200px;
+      margin:1.2rem 0 1.2rem 0;
+    }
+    .about-desc{
+      font-size:1rem;
+    }
+    .skill-card{
+      font-size:0.8rem;
+    }
+    .desc-card{
+      width:200px;
+    }
+    .head{
+      font-size:2rem;
+      margin-top:1rem;
+      margin-right:1rem;
+    }
+    .container p{
+      font-size: 1rem;
+    }
+    .credit{
+      font-size: 1rem;
+    }
+  }
   /* footer section ends */
   .box-container{
     display: flex;
   }
+  .share{
+    display: flex;
+    justify-content: center;
+  }
+  .skill-card:hover{
+    transform: scale(1.05);
+  }
+  .card{
+    margin:1rem 0 6rem 0;
+  }
+  
